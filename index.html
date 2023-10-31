@@ -19,8 +19,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <script src="toggle.js"></script>
-    <script src="script.js"></script>
+
   </head>
 
   <body>
@@ -45,34 +44,28 @@
                 <input type="text" placeholder="Search for a country..." />
               </div>
               <div class="filter">
-              <button id="toggleButton">
+              <button id="toggle-button" data-selected="All">
                 Filter by Region<i class="fa-solid fa-angle-down"></i>
               </button>
-              <div class="region" id="regionList">
-                <a class="region-link">Africa</a>
-                <a class="region-link">America</a>
-                <a class="region-link">Asia</a>
-                <a class="region-link">Europa</a>
-                <a class="region-link">Oceania</a>
+              <div class="region" id="region-list">
+                <a class="region-link" data-id="All">All</a>
+                <a class="region-link" data-id="Africa">Africa</a>
+                <a class="region-link" data-id="America">America</a>
+                <a class="region-link" data-id="Asia">Asia</a>
+                <a class="region-link" data-id="Europa">Europa</a>
+                <a class="region-link" data-id="Oceania">Oceania</a>
               </div>
               </div>
             </div>
           </div>
 
-          <div id="regionDetails"></div>
+          <div id="countries-container"></div>
 
-          <div class="items">
-            <div class="item item-1"></div>
-            <div class="item item-2"></div>
-            <div class="item item-3"></div>
-            <div class="item item-4"></div>
-            <div class="item item-5"></div>
-            <div class="item item-6"></div>
-            <div class="item item-7"></div>
-            <div class="item item-8"></div>
-          </div>
+
         </div>
       </div>
     </div>
+    <script src="toggle.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
