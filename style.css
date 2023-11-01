@@ -159,12 +159,33 @@ button i {
   margin-left: 60px;
 }
 
-.items {
+#countries-container{
+  margin-top: 40px;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  place-items: center;
+  gap: 60px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 10px;
+  padding-bottom: 10px;
+  width: 240px;
+}
+
+.img{
+    height: 140px;
+    width: 240px;
 }
 
 /* ----------------  MOBILE  ----------------*/
 
-@media only screen and (max-width: 499px) {
+@media only screen and (max-width: 600px) {
   body {
     height: auto;
     width: 100vw;
@@ -263,18 +284,15 @@ button i {
     padding: 10px;
   }
 
-  .items {
-    flex-direction: column;
-    display: flex;
-    margin-top: 40px;
-  }
-
-  .item {
-    padding: 20px;
+  .countries-grid {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    place-items: center;
+    gap: 60px;
   }
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 601px) {
   body {
     height: auto;
     width: 100vw;
@@ -374,18 +392,15 @@ button i {
     padding: 10px;
   }
 
-  .items {
-    flex-direction: column;
-    display: flex;
-    margin-top: 40px;
-  }
-
-  .item {
-    padding: 20px;
+  .countries-grid {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    place-items: center;
+    gap: 60px;
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1440px) {
+@media only screen and (min-width: 920px) and (max-width: 1440px) {
 
 .search {
   display: flex;
@@ -409,6 +424,13 @@ button i {
 
 .button {
   margin-left: 200px;
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  place-items: center;
+  gap: 60px;
 }
 }
 
@@ -469,7 +491,7 @@ button i {
 
   button {
     width: 200px;
-    margin-top: -10px;
+    margin-top: 0px;
     background-color: white;
     border: none;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
@@ -507,13 +529,10 @@ button i {
     padding: 10px;
   }
 
-  .items {
-    flex-direction: column;
-    display: flex;
-    margin-top: 40px;
-  }
-
-  .item {
-    padding: 20px;
+  .countries-grid {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    place-items: center;
+    gap: 60px;
   }
 }
