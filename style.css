@@ -22,7 +22,7 @@
 }
 
 body {
-  background-color: white;
+  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,7 +107,8 @@ input{
 .region-open {
   padding-inline: 10px;
   max-height: 1000px;
-  transition: max-height 0.3s ease-in-out; 
+  transition: max-height 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .region a{
@@ -130,16 +131,21 @@ button {
 }
 
 .button {
-  display: flex;
+  margin-left: 400px;
   height: 40px;
   width: 200px;
-  margin-left: 400px;
-  align-items: center;
-  justify-content: center;
   font-weight: 600;
   border-radius: 5px;
   background-color: white;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 200px;
 }
 
 a {
@@ -173,14 +179,15 @@ button i {
 .card {
   border: 1px solid #ddd;
   text-align: center;
-  border-radius: 10px;
+  border-radius: 5px;
   padding-bottom: 10px;
   width: 240px;
 }
 
 .img{
     height: 140px;
-    width: 240px;
+    width: 238px;
+    border-radius: 5px 5px 0 0;
 }
 
 /* ----------------  MOBILE  ----------------*/

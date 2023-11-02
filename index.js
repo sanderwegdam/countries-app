@@ -62,12 +62,10 @@ function filterAndDisplayCountries() {
     .map(({ flags, name, population, region, capital, alpha3Code: code }) => {
       return `<a href="detail-page.html?code=${code}" class="card">
         <img src="${flags.png}" alt="${name} flag" class="img" />
-        <footer>
           <h3>${name}</h3>
           <p><span>Population:</span> ${population}</p>
           <p><span>Region:</span> ${region}</p>
           <p><span>Capital:</span> ${capital}</p>
-        </footer>
       </a>`;
     })
     .join("");
