@@ -429,10 +429,6 @@ button i {
   align-self: flex-end;
 }
 
-.button {
-  margin-left: 200px;
-}
-
 .countries-grid {
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -503,10 +499,6 @@ button i {
     border: none;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
     align-self: flex-end;
-  }
-
-  .button {
-    margin-left: 200px;
   }
 
   .search-balk {

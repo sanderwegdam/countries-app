@@ -1,0 +1,312 @@
+/*******
+ BASIS
+ MOBILE
+ DESKTOP
+*********/
+
+:root {
+  --Dark-Blue-Dark-Mode-Elements: hsl(209, 23%, 22%);
+  --Very-Dark-Blue-Dark-Mode-Background: hsl(207, 26%, 17%);
+  --Very-Dark-Blue-Light-Mode-Text: hsl(200, 15%, 8%);
+  --Dark-Gray-Light-Mode-Input: hsl(0, 0%, 52%);
+  --Very-Light-Gray-Light-Mode-Background: hsl(0, 0%, 98%);
+  --White-Dark-Mode: hsl(0, 0%, 100%);
+}
+
+/* ----------------  BASIS  ----------------*/
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: "Nunito Sans", sans-serif;
+  width: 100vw;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80px;
+  box-shadow: 0px 10px 5px -5px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+}
+
+.header-title {
+}
+
+button {
+  height: 60px;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+}
+
+.detail-wrapper{
+  margin-top: 60px;
+  display: flex;
+  align-self: flex-start;
+  margin-left: 20px;
+}
+
+.button {
+  margin-left: 400px;
+  height: 40px;
+  width: 200px;
+  font-weight: 600;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 200px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover{
+  color: black;
+}
+
+a > i {
+  padding-right: 10px;
+}
+
+button i {
+  margin-left: 60px;
+}
+
+.card {
+  border: 1px solid #ddd;
+  text-align: center;
+  border-radius: 5px;
+  padding-bottom: 10px;
+  width: 240px;
+}
+
+#region-container{
+  margin-top: 60px;
+  flex-direction: row;
+  display: flex;
+  justify-content: center;
+}
+
+.region-wrapper {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  width: 800px;
+  font-size: 16px;
+}
+
+ .img {
+  width: 150%;
+  height: 100%;
+}
+
+.flex-container{
+  display: flex;
+  flex-direction: column;
+  padding-inline: 50px;
+  justify-content: center;
+}
+
+.flex-left, .flex-right {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.flex-right{
+  margin-top: 40px;
+}
+
+.flex-right p {
+  margin: 0;
+}
+
+.border-countries{
+  display: flex;
+  flex-direction: row;
+  padding-block: 70px;
+}
+
+.list{
+  display: flex;
+  flex-direction: row;
+}
+
+.list a{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* ----------------  MOBILE  ----------------*/
+
+@media only screen and (max-width: 600px) {
+  body {
+    height: auto;
+    width: 100vw;
+  }
+
+  .main-container {
+    background-color: white;
+  }
+
+  .wrapper {
+
+  }
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-title {
+    margin-left: 20px;
+  }
+
+  .header-title h1 {
+    font-size: 14px;
+  }
+
+  .dark-mode {
+    font-size: 10px;
+    padding: 0 10px;
+    margin-right: 20px;
+  }
+
+  .dark-mode i {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .button {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 601px) {
+  body {
+    height: auto;
+    width: 100vw;
+  }
+
+  .main-container {
+    background-color: white;
+  }
+
+  .wrapper {
+
+  }
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-title {
+    margin-left: 20px;
+  }
+
+  .header-title h1 {
+    font-size: 16px;
+  }
+
+  .dark-mode {
+    font-size: 10px;
+    padding: 0 10px;
+    margin-right: 20px;
+  }
+
+  .dark-mode i {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .button {
+    margin-left: 40px;
+  }
+}
+
+@media only screen and (min-width: 920px) and (max-width: 1440px) {
+.button {
+  margin-left: 200px;
+}
+}
+
+/* ----------------  DESKTOP  ----------------*/
+@media only screen and (min-width: 1441px) {
+  body {
+    height: auto;
+    width: 100vw;
+  }
+
+  .main-container {
+    background-color: white;
+  }
+
+  .wrapper {
+
+  }
+
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-title {
+    margin-left: 20px;
+  }
+
+  .header-title h1 {
+    font-size: 16px;
+  }
+
+  .dark-mode {
+    font-size: 10px;
+    padding: 0 10px;
+    margin-right: 20px;
+  }
+
+  .dark-mode i {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .button {
+    margin-left: 200px;
+  }
+}
