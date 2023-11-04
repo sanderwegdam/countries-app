@@ -53,7 +53,8 @@ body {
   width: 100vw;
 }
 
-.header-title {
+.header-title h1 {
+  font-size: 20px;
 }
 
 .dark-mode {
@@ -198,26 +199,9 @@ button i {
     width: 100vw;
   }
 
-  .main-container {
-
-    background-color: white;
-  }
-
-  .wrapper {
-
-  }
-
   .header-wrapper {
     display: flex;
     justify-content: space-between;
-  }
-
-  .header-title {
-    margin-left: 20px;
-  }
-
-  .header-title h1 {
-    font-size: 14px;
   }
 
   .dark-mode {
@@ -305,26 +289,9 @@ button i {
     width: 100vw;
   }
 
-  .main-container {
-
-    background-color: white;
-  }
-
-  .wrapper {
-
-  }
-
   .header-wrapper {
     display: flex;
     justify-content: space-between;
-  }
-
-  .header-title {
-    margin-left: 20px;
-  }
-
-  .header-title h1 {
-    font-size: 16px;
   }
 
   .dark-mode {
@@ -444,25 +411,9 @@ button i {
     width: 100vw;
   }
 
-  .main-container {
-    background-color: white;
-  }
-
-  .wrapper {
-
-  }
-
   .header-wrapper {
     display: flex;
     justify-content: space-between;
-  }
-
-  .header-title {
-    margin-left: 20px;
-  }
-
-  .header-title h1 {
-    font-size: 16px;
   }
 
   .dark-mode {
