@@ -54,6 +54,7 @@ body {
 }
 
 .header-title h1 {
+  margin-left: 50px;
   font-size: 20px;
 }
 
@@ -120,13 +121,6 @@ button {
   border-radius: 5px;
   text-align: center;
   padding: 10px;
-}
-
-.detail-wrapper{
-  margin-top: 60px;
-  display: flex;
-  align-self: flex-start;
-  margin-left: 20px;
 }
 
 .button {
