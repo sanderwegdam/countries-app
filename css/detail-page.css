@@ -22,11 +22,14 @@
 .button {
   margin-left: 400px;
   height: 40px;
-  width: 200px;
+  width: 150px;
   font-weight: 600;
   border-radius: 5px;
   background-color: white;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 a {
@@ -40,10 +43,6 @@ a:hover {
 
 a > i {
   padding-right: 10px;
-}
-
-button i {
-  margin-left: 60px;
 }
 
 .card {
@@ -64,16 +63,17 @@ button i {
 .img {
   width: 150%;
   height: 100%;
+  padding-block: 20px;
 }
 
 .flex-container {
   display: flex;
   flex-direction: column;
   padding-inline: 50px;
-  justify-content: center;
 }
 
 .region-wrapper {
+  line-height: 30px;
   flex-direction: row;
   display: flex;
   justify-content: space-between;
@@ -84,11 +84,14 @@ button i {
 .flex-right {
   display: flex;
   flex-direction: column;
-  width: 400px;
+}
+
+.flex-left h1{
+  padding-block: 20px;
 }
 
 .flex-right {
-  margin-top: 40px;
+  margin-top: 70px;
 }
 
 .flex-right p {
@@ -98,33 +101,60 @@ button i {
 .border-countries {
   display: flex;
   flex-direction: row;
+  padding-right: 70px;
   padding-block: 70px;
+}
+
+.border-countries h3{
+  padding-inline: 10px;
 }
 
 .list {
   display: flex;
   flex-direction: row;
+  width: 400px;
+  text-align: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
 }
 
 .list a {
-  width: 100px;
-  height: 30px;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  height: 50px;
+  font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  justify-content: center;
 }
 
 /* ----------------  MOBILE  ----------------*/
 
 @media only screen and (max-width: 600px) {
   .button {
-    margin-left: 20px;
+    margin-left: 50px;
+  }
+
+  #region-container {
+    margin-top: 60px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    width: 330px;
+  }
+
+  .img {
+    width: 70%;
+    height: 70%;
+    margin-left: 50px;
   }
 
   .flex-container {
     display: flex;
     flex-direction: column;
     padding-inline: 50px;
-    justify-content: center;
   }
 
   .region-wrapper {
@@ -141,6 +171,7 @@ button i {
   }
 
   .list {
+    width: 200px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -149,14 +180,27 @@ button i {
 
 @media only screen and (min-width: 601px) {
   .button {
-    margin-left: 40px;
+    margin-left: 50px;
+  }
+
+  #region-container {
+    margin-top: 60px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+  }
+
+  .img {
+    width: 50%;
+    height: 50%;
+    margin-left: 50px;
   }
 
   .flex-container {
     display: flex;
     flex-direction: column;
     padding-inline: 50px;
-    justify-content: center;
   }
 
   .region-wrapper {
@@ -168,7 +212,7 @@ button i {
 
   .border-countries {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     padding-block: 70px;
   }
 
@@ -183,11 +227,24 @@ button i {
     margin-left: 40px;
   }
 
+  #region-container {
+    margin-top: 60px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    width: 920px;
+  }
+
+  .img {
+    width: 50%;
+    height: 50%;
+    align-self: flex-start;
+  }
+
   .flex-container {
     display: flex;
     flex-direction: column;
     padding-inline: 50px;
-    justify-content: center;
   }
 
   .region-wrapper {
@@ -202,6 +259,20 @@ button i {
 @media only screen and (min-width: 1441px) {
   .button {
     margin-left: 40px;
+  }
+
+  #region-container {
+    margin-top: 60px;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    width: 920px;
+  }
+
+  .img {
+    width: 50%;
+    height: 50%;
+    align-self: flex-start;
   }
 
   .flex-container {
