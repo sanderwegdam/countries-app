@@ -64,10 +64,19 @@ body {
   flex-direction: row;
   display: flex;
   align-items: center;
+  font-size: 10px;
+  padding: 0 10px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.dark-modes :not(.img){
+  background-color: black;
+  color: white;
 }
 
 .dark-mode i {
-  font-size: 20px;
+  font-size: 16px;
   padding: 0 10px;
 }
 
@@ -166,6 +175,8 @@ button i {
   border-radius: 5px 5px 0 0;
 }
 
+
+
 /* ----------------  MOBILE  ----------------*/
 
 @media only screen and (max-width: 600px) {
@@ -177,22 +188,6 @@ button i {
   .header-wrapper {
     display: flex;
     justify-content: space-between;
-  }
-
-  .dark-mode {
-    font-size: 10px;
-    padding: 0 10px;
-    margin-right: 20px;
-  }
-
-  .dark-modes {
-    background-color: #222;
-    color: #fff;
-  }
-
-  .dark-mode i {
-    font-size: 16px;
-    padding: 0 10px;
   }
 
   .search {
@@ -262,17 +257,6 @@ button i {
   .header-wrapper {
     display: flex;
     justify-content: space-between;
-  }
-
-  .dark-mode {
-    font-size: 10px;
-    padding: 0 10px;
-    margin-right: 20px;
-  }
-
-  .dark-mode i {
-    font-size: 16px;
-    padding: 0 10px;
   }
 
   .search {
@@ -373,17 +357,6 @@ button i {
   .header-wrapper {
     display: flex;
     justify-content: space-between;
-  }
-
-  .dark-mode {
-    font-size: 10px;
-    padding: 0 10px;
-    margin-right: 20px;
-  }
-
-  .dark-mode i {
-    font-size: 16px;
-    padding: 0 10px;
   }
 
   .search {

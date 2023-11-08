@@ -85,3 +85,5 @@ function getCountryNamesByBorders(borderCode) {
   const country = data.find((country) => country.alpha3Code === borderCode);
   return country ? country.name : "Onbekend";
 }
+
+
