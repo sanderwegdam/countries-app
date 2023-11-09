@@ -5,15 +5,25 @@
 *********/
 
 :root {
-  --Dark-Blue-Dark-Mode-Elements: hsl(209, 23%, 22%);
-  --Very-Dark-Blue-Dark-Mode-Background: hsl(207, 26%, 17%);
-  --Very-Dark-Blue-Light-Mode-Text: hsl(200, 15%, 8%);
-  --Dark-Gray-Light-Mode-Input: hsl(0, 0%, 52%);
-  --Very-Light-Gray-Light-Mode-Background: hsl(0, 0%, 98%);
-  --White-Dark-Mode: hsl(0, 0%, 100%);
+  --background: hsl(0, 0%, 98%);
+  --element: hsl(0, 0%, 100%);
+  --text: hsl(200, 15%, 8%);
+  --selected: rgba(133, 133, 133, 0.2);
+  --hover: rgba(133, 133, 133, 0.15);
+  --light-mode-Input: hsl(0, 0%, 52%);
+  --border: 1px solid #ddd;
 }
 
 /* ----------------  BASIS  ----------------*/
+
+.dark-modes {
+  --border: none;
+  --background: hsl(207, 26%, 17%);
+  --element: hsl(209, 23%, 22%);
+  --text: hsl(0, 0%, 100%);
+  --selected: rgba(133, 133, 133, 0.5);
+  --hover: rgba(133, 133, 133, 0.35);
+}
 
 .detail-wrapper {
   margin-top: 60px;
@@ -25,22 +35,18 @@
   width: 150px;
   font-weight: 600;
   border-radius: 5px;
-  background-color: white;
+  background-color: var(--element);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 a {
-  color: black;
+  color: var(--text);
   text-decoration: none;
   height: 40px;
   width: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-a:hover {
-  color: black;
 }
 
 a > i {
@@ -60,6 +66,7 @@ a > i {
   flex-direction: row;
   display: flex;
   justify-content: center;
+  color: var(--text);
 }
 
 .img {
@@ -121,14 +128,19 @@ a > i {
 }
 
 .list a {
-  align-items: center;
   display: flex;
   padding: 10px;
   height: 50px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  justify-content: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 150px;
+  align-items: center;
+  justify-content: flex-start;
+
 }
 
 /* ----------------  MOBILE  ----------------*/

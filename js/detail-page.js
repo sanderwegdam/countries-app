@@ -29,56 +29,39 @@ const displaySingleCountry = () => {
 
   console.log(country);
 
-  if (country) {
-    // Bouw de HTML-structuur voor het enkele land
-    const countryHTML = `
-    <img src="${country.flags.png}" alt="${country.name} flag" class="img" />
-    <div class="flex-container">
-    <div class="region-wrapper">
-    <div class="flex-left">
-            <h1>${country.name}</h1>
-            <p><strong>Native name:</strong> <span>${country.nativeName}</span></p>
-            <p><strong>Population:</strong> <span>${country.population}</span></p>
-            <p><strong>Region:</strong> <span>${country.region}</span></p>
-            <p><strong>Sub region:</strong> <span>${country.subregion}</span></p>
-            <p><strong>Capital:</strong> <span>${country.capital}</span></p>
-          </div>
-          <div class="flex-right">
-            <p><span><strong>Top level domain: </strong></span>${country.topLevelDomain}</p>
-            <p><span><strong>Currencies: </strong></span>${
-              country.currencies ? country.currencies[0].name : "unknown"
-            }</p>
-            <p><span><strong>Languages: </strong></span>${
-              country.languages
-                ? country.languages
-                    .map((language) => {
-                      return language.name;
-                    })
-                    .join(", ")
-                : "unknown"
-            }</p>
-          </div>
-          </div>
-          <div class="border-countries">
-            <h3>Border countries:</h3>
-            <div class="list">
-              ${
-                country.borders
-                  ? country.borders
-                      .map(
-                        (border) =>
-                          `<a href="detail-page.html?code=${border}" class="btn">${getCountryNamesByBorders(border)}</a>`
-                      )
-                      .join("")
-                  : "<p>unknown</p>"
-              }
-              </div>
-            </div>
-            </div>
-    `;
+  const template = document.getElementById("country-template");
+  const countryClone = document.importNode(template.content, true);
 
-    regionContainerDOM.innerHTML = countryHTML;
-  }
+  // Vervang de placeholders in de gekloonde HTML met de werkelijke gegevens
+  countryClone.querySelector("img").src = country.flags.png;
+  countryClone.querySelector("img").alt = country.name;
+  countryClone.querySelector("h1").textContent = country.name;
+  countryClone.querySelector(".native-name").textContent = country.nativeName;
+  countryClone.querySelector(".population").textContent = country.population;
+  countryClone.querySelector(".region-name").textContent = country.region;
+  countryClone.querySelector(".sub-region").textContent = country.subregion;
+  countryClone.querySelector(".capital").textContent = country.capital;
+  countryClone.querySelector(".top-level-domain").textContent = country.topLevelDomain;
+  countryClone.querySelector(".currencies").textContent =
+    country.currencies ? country.currencies[0].name : "unknown";
+  countryClone.querySelector(".languages").textContent =   country.languages
+  ? country.languages
+      .map((language) => {
+        return language.name;
+      })
+      .join(", ")
+  : "unknown";
+
+const listDiv = countryClone.querySelector(".list");
+if (country.borders) {
+  const borderList = country.borders.map((border) => `
+    <a href="detail-page.html?code=${border}" class="btn-borders">${getCountryNamesByBorders(border)}</a>
+  `).join("");
+  listDiv.innerHTML = borderList;
+} else {
+  listDiv.innerHTML = "<p>unknown</p>";
+}
+  regionContainerDOM.appendChild(countryClone);
 };
 
 function getCountryNamesByBorders(borderCode) {

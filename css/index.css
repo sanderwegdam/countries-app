@@ -5,12 +5,13 @@
 *********/
 
 :root {
-  --Dark-Blue-Dark-Mode-Elements: hsl(209, 23%, 22%);
-  --Very-Dark-Blue-Dark-Mode-Background: hsl(207, 26%, 17%);
-  --Very-Dark-Blue-Light-Mode-Text: hsl(200, 15%, 8%);
-  --Dark-Gray-Light-Mode-Input: hsl(0, 0%, 52%);
-  --Very-Light-Gray-Light-Mode-Background: hsl(0, 0%, 98%);
-  --White-Dark-Mode: hsl(0, 0%, 100%);
+  --background: hsl(0, 0%, 98%);
+  --element: hsl(0, 0%, 100%);
+  --text: hsl(200, 15%, 8%);
+  --selected: rgba(133, 133, 133, 0.2);
+  --hover: rgba(133, 133, 133, 0.15);
+  --light-mode-Input: hsl(0, 0%, 52%);
+  --border: 1px solid #ddd;
 }
 
 /* ----------------  BASIS  ----------------*/
@@ -21,15 +22,23 @@
   box-sizing: border-box;
 }
 
+.dark-modes {
+  --border: none;
+  --background: hsl(207, 26%, 17%);
+  --element: hsl(209, 23%, 22%);
+  --text: hsl(0, 0%, 100%);
+  --selected: rgba(133, 133, 133, 0.5);
+  --hover: rgba(133, 133, 133, 0.35);
+}
+
 body {
-  background-color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 14px;
   font-family: "Nunito Sans", sans-serif;
   width: 100vw;
-  background-color: rgba(209, 208, 208, 0.1);
+  background-color: var(--background);
 }
 
 .main-container {
@@ -57,6 +66,7 @@ body {
 .header-title h1 {
   margin-left: 50px;
   font-size: 20px;
+  color: var(--text);
 }
 
 .dark-mode {
@@ -68,11 +78,7 @@ body {
   padding: 0 10px;
   margin-right: 20px;
   cursor: pointer;
-}
-
-.dark-modes :not(.img){
-  background-color: black;
-  color: white;
+  color: var(--text)
 }
 
 .dark-mode i {
@@ -87,10 +93,29 @@ body {
 .search-balk {
   width: 360px;
   height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: var(--element);
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  color: var(--text);
 }
 
 input {
   height: 30px;
+  color: var(--text)
+}
+
+input::placeholder {
+  color: var(--text);
 }
 
 .filter {
@@ -102,7 +127,7 @@ input {
   display: flex;
   flex-direction: column;
   padding-inline: 10px;
-  background-color: white;
+  background-color: var(--element);
   margin-top: 10px;
   padding-inline: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -131,15 +156,14 @@ button {
   border-radius: 5px;
   text-align: center;
   padding: 10px;
+  color: var(--text);
+  background-color: var(--element);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 a {
-  color: black;
+  color: var(--text);
   text-decoration: none;
-}
-
-a:hover {
-  color: black;
 }
 
 a > i {
@@ -162,11 +186,12 @@ button i {
 }
 
 .card {
-  border: 1px solid #ddd;
+  border: var(--border);
   text-align: center;
   border-radius: 5px;
   padding-bottom: 10px;
   width: 240px;
+  background-color: var(--element);
 }
 
 .img {
@@ -174,7 +199,6 @@ button i {
   width: 238px;
   border-radius: 5px 5px 0 0;
 }
-
 
 
 /* ----------------  MOBILE  ----------------*/
@@ -195,30 +219,14 @@ button i {
     flex-direction: column;
   }
 
-  .search-balk {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   button {
     width: 200px;
     margin-top: 20px;
-    background-color: white;
     border: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .button {
     margin-left: 20px;
-  }
-
-  .search-balk {
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .search-icon {
@@ -264,19 +272,10 @@ button i {
     flex-direction: column;
   }
 
-  .search-balk {
-    width: 375px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
   button {
     width: 200px;
     margin-top: 20px;
-    background-color: white;
     border: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
   .button {
@@ -284,25 +283,17 @@ button i {
   }
 
   .search-balk {
-    background-color: white;
+    width: 375px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
 
-  .search-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    height: 40px;
-    width: 40px;
-  }
-
   input {
     width: 320px;
     border: none;
+    background-color: var(--element);
   }
 
   input::placeholder {
@@ -369,27 +360,15 @@ button i {
   button {
     width: 200px;
     margin-top: 0px;
-    background-color: white;
     border: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     align-self: flex-end;
   }
 
   .search-balk {
-    background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-
-  .search-icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    height: 40px;
-    width: 40px;
   }
 
   input {

@@ -41,7 +41,33 @@
             <a href="./index.html" class="btn btn-back">
               <i class="fa-solid fa-arrow-left-long"></i>Back</a>
             </div>
-            <div id="region-container"></div>
+            <div id="region-container">
+              <template id="country-template">
+              <img src="" alt="" class="img" />
+              <div class="flex-container">
+                <div class="region-wrapper">
+                  <div class="flex-left">
+                    <h1></h1>
+                    <p><strong>Native name:</strong> <span class="native-name"></span></p>
+                    <p><strong>Population:</strong> <span class="population"></span></p>
+                    <p><strong>Region:</strong> <span class="region-name"></span></p>
+                    <p><strong>Sub region:</strong> <span class="sub-region"></span></p>
+                    <p><strong>Capital:</strong> <span class="capital"></span></p>
+                  </div>
+                  <div class="flex-right">
+                    <p><strong>Top level domain: </strong><span class="top-level-domain"></span></p>
+                    <p><strong>Currencies: </strong><span class="currencies"></span ></p>
+                    <p><strong>Languages: </strong><span class="languages"></span ></p>
+                  </div>
+                </div>
+                <div class="border-countries">
+                  <h3>Border countries:</h3>
+                  <div class="list">
+                  </div>
+                </div>
+              </div>
+            </template>
+            </div>
         </div>
       </div>
     </div>
