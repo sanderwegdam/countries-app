@@ -1,17 +1,15 @@
-
-const fetchData = async (show) => {
+const fetchData = async () => {
   try {
     const url = "data.json";
     const response = await fetch(url);
-
     if (!response.ok) {
       throw new Error(`Network response was not ok: ${response.status}`);
     }
-    let data;
-    data = await response.json(); // Sla de gegevens op in de "data" variabele
-    show(data);
+    const data = await response.json();
+    return data;
   } catch (error) {
-    console.error(error); // Toon de fout in de console
+    console.error(error);
+    throw error; // Re-throw the error to propagate it further if needed
   }
 };
 

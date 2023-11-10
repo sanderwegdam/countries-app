@@ -2,9 +2,10 @@ import fetchData from './fetch.js';
 
 const regionContainerDOM = document.querySelector("#region-container");
 
-fetchData(displaySingleCountry)
+async function displaySingleCountry() {
+  try {
+    const data = await fetchData();
 
-function displaySingleCountry(data) {
   const urlParams = new URLSearchParams(window.location.search);
   const countryCode = urlParams.get("code");
 
@@ -46,7 +47,12 @@ if (country.borders) {
   listDiv.innerHTML = "<p>unknown</p>";
 }
   regionContainerDOM.appendChild(countryClone);
-};
+} catch (error) {
+  console.error(error);
+}
+}
+
+displaySingleCountry();
 
 function getCountryNamesByBorders(borderCode, data) {
   const country = data.find((country) => country.alpha3Code === borderCode);
