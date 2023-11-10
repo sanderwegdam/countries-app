@@ -1,24 +1,9 @@
+
+import fetchData from './fetch.js';
+
 const countriesContainerDOM = document.querySelector("#countries-container");
-const url = "data.json"; // Verander dit naar de werkelijke URL van je gegevens
 
-let data; // Voeg een variabele toe om de gegevens op te slaan
-
-const fetchData = async () => {
-  try {
-    const response = await fetch(url);
-
-    if (!response.ok) {
-      throw new Error(`Network response was not ok: ${response.status}`);
-    }
-
-    data = await response.json(); // Sla de gegevens op in de "data" variabele
-    filterAndDisplayCountries();
-  } catch (error) {
-    console.error(error); // Toon de fout in de console
-  }
-};
-
-fetchData();
+fetchData(filterAndDisplayCountries);
 
 const dropdownBtn = document.querySelector("#toggle-button");
 const searchInput = document.querySelector("#search-input");
@@ -33,7 +18,6 @@ const dropdownFiltering = (e) => {
     } else {
       dropdownBtn.textContent = `${e.target.textContent}`;
     }
-
     filterAndDisplayCountries();
   }
 };
@@ -46,7 +30,7 @@ regionLinks.forEach(link => {
 
 searchInput.addEventListener("input", filterAndDisplayCountries);
 
-function filterAndDisplayCountries() {
+function filterAndDisplayCountries(data) {
   const selectedRegion = dropdownBtn.dataset.selected;
   const searchValue = searchInput.value.toLowerCase();
   const filteredCountries = data.filter(country => {
@@ -63,7 +47,7 @@ function filterAndDisplayCountries() {
       return `<a href="detail-page.html?code=${code}" class="card">
         <img src="${flags.png}" alt="${name} flag" class="img" />
           <h3>${name}</h3>
-          <p><span>Population:</span> ${population}</p>
+          <p><span>Population:</span> ${numberWithDots(population)}</p>
           <p><span>Region:</span> ${region}</p>
           <p><span>Capital:</span> ${capital}</p>
       </a>`;
@@ -74,3 +58,7 @@ function filterAndDisplayCountries() {
 }
 
 dropdownBtn.textContent = "Filter by Region";
+
+const numberWithDots = (number) => {
+  return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+};
