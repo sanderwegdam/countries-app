@@ -65,7 +65,7 @@ body {
 }
 
 .header-title h1 {
-  margin-left: 50px;
+  margin-left: 30px;
   font-size: 14px;
   color: var(--text);
 }
@@ -277,7 +277,6 @@ button i {
   }
 
   .header-title h1 {
-    margin-left: 50px;
     font-size: 20px;
     color: var(--text);
   }
