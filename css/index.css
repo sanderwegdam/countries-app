@@ -38,6 +38,7 @@ body {
   font-size: 14px;
   font-family: "Nunito Sans", sans-serif;
   width: 100vw;
+  overflow-x: hidden;
   background-color: var(--background);
 }
 
@@ -106,15 +107,17 @@ body {
   align-items: center;
   height: 40px;
   width: 40px;
-  color: var(--text);
+  color: var(--text)
 }
 
 input {
   height: 30px;
-  color: var(--text)
+  color: var(--text);
+  background-color: var(--element)
 }
 
 input::placeholder {
+  background-color: var(--element);
   color: var(--text);
 }
 
@@ -204,11 +207,6 @@ button i {
 /* ----------------  MOBILE  ----------------*/
 
 @media only screen and (max-width: 600px) {
-  body {
-    height: auto;
-    width: 100vw;
-  }
-
   .header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -233,7 +231,6 @@ button i {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
     height: 40px;
     width: 40px;
   }
@@ -257,11 +254,6 @@ button i {
 }
 
 @media only screen and (min-width: 601px) {
-  body {
-    height: auto;
-    width: 100vw;
-  }
-
   .header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -340,11 +332,6 @@ button i {
 
 /* ----------------  DESKTOP  ----------------*/
 @media only screen and (min-width: 1441px) {
-  body {
-    height: auto;
-    width: 100vw;
-  }
-
   .header-wrapper {
     display: flex;
     justify-content: space-between;

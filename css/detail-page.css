@@ -15,6 +15,9 @@
 }
 
 /* ----------------  BASIS  ----------------*/
+body{
+  width: 100vw;
+}
 
 .dark-modes {
   --border: none;

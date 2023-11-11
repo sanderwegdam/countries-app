@@ -28,7 +28,7 @@ async function displaySingleCountry() {
   countryClone.querySelector(".capital").textContent = country.capital;
   countryClone.querySelector(".top-level-domain").textContent = country.topLevelDomain;
   countryClone.querySelector(".currencies").textContent =
-  country.currencies ? country.currencies[0].name : "unknown";
+  country.currencies ? country.currencies[0].name: "unknown";
   countryClone.querySelector(".languages").textContent =   country.languages
   ? country.languages
       .map((language) => {
@@ -44,7 +44,7 @@ if (country.borders) {
   `).join("");
   listDiv.innerHTML = borderList;
 } else {
-  listDiv.innerHTML = "<p>unknown</p>";
+  listDiv.innerHTML = "<p style=padding-inline:10px;>unknown</p>";
 }
   regionContainerDOM.appendChild(countryClone);
 } catch (error) {

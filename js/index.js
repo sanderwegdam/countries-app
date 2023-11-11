@@ -3,8 +3,10 @@ import fetchData from './fetch.js';
 const countriesContainerDOM = document.querySelector("#countries-container");
 
 async function fetchDataAndDisplay() {
+  console.log("fetchDataAndDisplay called");
   try {
     const data = await fetchData();
+    console.log("Data received:", data);
 
     const dropdownBtn = document.querySelector("#toggle-button");
     const searchInput = document.querySelector("#search-input");
@@ -57,14 +59,16 @@ async function fetchDataAndDisplay() {
       countriesContainerDOM.innerHTML = `<div class="countries-grid">${countries}</div>`;
     }
 
+    filterAndDisplayCountries();
+
     dropdownBtn.textContent = "Filter by Region";
   } catch (error) {
-    console.error(error);
+    console.log("Error in fetchDataAndDisplay:", error);
   }
 }
 
 // Call the asynchronous function
-fetchDataAndDisplay();
+document.addEventListener("DOMContentLoaded", fetchDataAndDisplay);
 
 const numberWithDots = (number) => {
   return number.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
