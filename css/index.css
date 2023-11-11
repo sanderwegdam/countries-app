@@ -66,7 +66,7 @@ body {
 
 .header-title h1 {
   margin-left: 50px;
-  font-size: 20px;
+  font-size: 14px;
   color: var(--text);
 }
 
@@ -79,11 +79,11 @@ body {
   padding: 0 10px;
   margin-right: 20px;
   cursor: pointer;
-  color: var(--text)
+  color: var(--text);
 }
 
 .dark-mode i {
-  font-size: 16px;
+  font-size: 14px;
   padding: 0 10px;
 }
 
@@ -92,7 +92,8 @@ body {
 }
 
 .search-balk {
-  width: 360px;
+  width: 330px;
+  padding-inline: 20px;
   height: 60px;
   display: flex;
   align-items: center;
@@ -154,6 +155,8 @@ input::placeholder {
 }
 
 button {
+  width: 200px;
+  padding-inline: 20px;
   height: 60px;
   font-weight: 600;
   border-radius: 5px;
@@ -203,6 +206,21 @@ button i {
   border-radius: 5px 5px 0 0;
 }
 
+@media only screen and (min-width: 375px) and (max-width: 599px) {
+  .header-title h1 {
+    font-size: 16px;
+  }
+
+  .dark-mode {
+    font-size: 10px;
+  }
+  
+  .dark-mode i {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}
+
 
 /* ----------------  MOBILE  ----------------*/
 
@@ -218,7 +236,6 @@ button i {
   }
 
   button {
-    width: 200px;
     margin-top: 20px;
     border: none;
   }
@@ -259,13 +276,18 @@ button i {
     justify-content: space-between;
   }
 
+  .header-title h1 {
+    margin-left: 50px;
+    font-size: 20px;
+    color: var(--text);
+  }
+
   .search {
     display: flex;
     flex-direction: column;
   }
 
   button {
-    width: 200px;
     margin-top: 20px;
     border: none;
   }
@@ -345,7 +367,6 @@ button i {
   }
 
   button {
-    width: 200px;
     margin-top: 0px;
     border: none;
     align-self: flex-end;
