@@ -10,7 +10,6 @@
   --text: hsl(200, 15%, 8%);
   --selected: rgba(133, 133, 133, 0.2);
   --hover: rgba(133, 133, 133, 0.15);
-  --light-mode-Input: hsl(0, 0%, 52%);
   --border: 1px solid #ddd;
 }
 
@@ -28,7 +27,7 @@
   --element: hsl(209, 23%, 22%);
   --text: hsl(0, 0%, 100%);
   --selected: rgba(133, 133, 133, 0.5);
-  --hover: rgba(133, 133, 133, 0.35);
+  --hover: hsl(209, 23%, 33%);
 }
 
 body {
@@ -144,14 +143,19 @@ input::placeholder {
 }
 
 .region-open {
-  padding-inline: 10px;
+  padding: 10px;
   max-height: 1000px;
   transition: max-height 0.3s ease-in-out;
   cursor: pointer;
+
 }
 
 .region a {
   padding: 5px;
+}
+
+.region a:hover{
+  background-color: var(--hover);
 }
 
 button {
